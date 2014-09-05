@@ -1,0 +1,10 @@
+{
+  "name": "Angular on Cuba Blog",
+  "description": "A simple blog built in cuba & angular for the RubyConfAr 2014",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "angular": "1.3.x",
+    "angular-ui-router": "0.2.11"
+  }
+}
