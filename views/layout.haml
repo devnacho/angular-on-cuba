@@ -1,5 +1,5 @@
 !!!
-%html{ng: {app: ""}}
+%html{ng: {app: "myBlog"}}
   %head
     %title Angular on Cuba
     %link{ rel: "stylesheet", href: "/stylesheets/bootstrap.min.css" }
@@ -8,6 +8,8 @@
     %link{ rel: "stylesheet", href: "/stylesheets/style.css" }
 
     %script{src: "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular.min.js"}
+    %script{:src => "/js/app/app.js"}
+
 
   %body
     = content
