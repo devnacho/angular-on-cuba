@@ -1,7 +1,8 @@
 (function(){
   var app = angular.module('myBlog', ['ui.router']);
 
-  app.config(function($stateProvider, $urlRouterProvider) {
+  app.config(['$stateProvider', '$urlRouterProvider',
+             function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('');
 
@@ -10,7 +11,7 @@
             url: '/articles/new',
             templateUrl: '/js/app/partials/articles/new.html'
         })
-  });
+  }]);
 
 
 })();
