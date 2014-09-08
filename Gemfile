@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.2'
 
 gem 'cuba', '~> 3.3.0'
-gem 'haml'
+gem 'haml', '~> 4.0.5'
 
 
 group :development do

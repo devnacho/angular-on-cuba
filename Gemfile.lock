@@ -15,5 +15,5 @@ PLATFORMS
 
 DEPENDENCIES
   cuba (~> 3.3.0)
-  haml
+  haml (~> 4.0.5)
   shotgun (~> 0.9)
