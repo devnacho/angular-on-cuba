@@ -20,7 +20,7 @@
   }]);
 
   app.controller('ArticlesNewController', function($scope){
-
+    $scope.newArticle = {};
   });
 
   app.controller('ArticlesIndexController', function($scope){
