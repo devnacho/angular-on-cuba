@@ -24,7 +24,9 @@
   });
 
   app.controller('ArticlesIndexController', function($scope){
-
+    $scope.articles = [];
+    $scope.articles = [{title: "My first blog post"},
+                       {title: "I think this is quite interesting"}];
   });
 
 })();
