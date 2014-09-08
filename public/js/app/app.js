@@ -4,14 +4,27 @@
   app.config(['$stateProvider', '$urlRouterProvider',
              function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('');
+    $urlRouterProvider.otherwise('/articles');
 
     $stateProvider
-        .state('new-article', {
+        .state('articles-new', {
             url: '/articles/new',
-            templateUrl: '/js/app/partials/articles/new.html'
+            templateUrl: '/js/app/partials/articles/new.html',
+            controller: 'ArticlesNewController'
+        })
+        .state('articles-index', {
+            url: '/articles',
+            templateUrl: '/js/app/partials/articles/index.html',
+            controller: 'ArticlesIndexController'
         })
   }]);
 
+  app.controller('ArticlesNewController', function($scope){
+
+  });
+
+  app.controller('ArticlesIndexController', function($scope){
+
+  });
 
 })();
