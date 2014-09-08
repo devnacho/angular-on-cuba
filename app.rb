@@ -12,4 +12,8 @@ Cuba.define do
   on 'admin' do
     run Admin
   end
+
+  on default do
+    run Blog
+  end
 end
