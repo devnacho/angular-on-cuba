@@ -9,12 +9,12 @@
     $stateProvider
         .state('articles-new', {
             url: '/articles/new',
-            templateUrl: '/js/app/partials/articles/new.html',
+            templateUrl: '/partials/articles/new.html',
             controller: 'ArticlesNewController'
         })
         .state('articles-index', {
             url: '/articles',
-            templateUrl: '/js/app/partials/articles/index.html',
+            templateUrl: '/partials/articles/index.html',
             controller: 'ArticlesIndexController'
         })
   }]);

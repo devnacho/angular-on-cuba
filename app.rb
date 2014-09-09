@@ -13,6 +13,10 @@ Cuba.define do
     run Admin
   end
 
+  on 'partials' do
+    run Partials
+  end
+
   on default do
     run Blog
   end
