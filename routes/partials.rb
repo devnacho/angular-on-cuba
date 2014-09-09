@@ -7,7 +7,6 @@ class Partials < Cuba
   define do
 
     on get do
-      puts env["PATH_INFO"]
       res.write js_partial(env["PATH_INFO"])
     end
 
