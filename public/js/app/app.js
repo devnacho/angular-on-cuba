@@ -1,19 +1,21 @@
 (function(){
   var app = angular.module('myBlog', ['ui.router']);
 
-  app.config(['$stateProvider', '$urlRouterProvider',
-             function($stateProvider, $urlRouterProvider) {
+  app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
+             function($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    $urlRouterProvider.otherwise('/articles');
+    $locationProvider.html5Mode(true);
+
+    $urlRouterProvider.otherwise('/admin/articles');
 
     $stateProvider
         .state('articles-new', {
-            url: '/articles/new',
+            url: '/admin/articles/new',
             templateUrl: '/partials/admin/articles/new.html',
             controller: 'ArticlesNewController'
         })
         .state('articles-index', {
-            url: '/articles',
+            url: '/admin/articles',
             templateUrl: '/partials/admin/articles/index.html',
             controller: 'ArticlesIndexController'
         })
