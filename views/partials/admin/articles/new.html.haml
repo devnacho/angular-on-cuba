@@ -4,7 +4,7 @@
 
 %input.form-control{ ng: { model: "newArticle.title" }, type: "text", placeholder: "Article title" }
 %br
-%textarea.form-control{ ng: { model: "newArticle.content" }, rows: "12", placeholder: "Article content" }
+%ei-article-editor{"content" => "newArticle.content"}
 %br
-
-%pre {{newArticle.content}}
+%pre
+  {{newArticle}}
