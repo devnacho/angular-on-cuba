@@ -1,8 +1,11 @@
 require 'cuba'
 require "cuba/render"
+require 'sass/plugin/rack'
 
 Cuba.plugin Cuba::Render
 Cuba.settings[:render][:template_engine] = "haml"
+Cuba.use Sass::Plugin::Rack
+
 
 Dir["./lib/**/*.rb"].each     { |rb| require rb }
 Dir["./models/**/*.rb"].each  { |rb| require rb }
