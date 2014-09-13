@@ -1,1 +1,9 @@
-%textarea.form-control{ ng: { model: "content" }, rows: "12", placeholder: "Article content" }
+.ei-editor
+  %textarea.form-control{ ng: { model: "content", trim: "false" }, rows: "12", placeholder: "Article content" }
+  .ei-markdown-help
+    %h2 Markdown Help
+    %h3 Headers
+    %ul
+      %li{ng: {repeat: 'mdHeader in mdHeaders'}}
+        %a.insert{href: true, ng: {click: "insert(mdHeader)"}} insert
+        {{mdHeader.syntax}}
