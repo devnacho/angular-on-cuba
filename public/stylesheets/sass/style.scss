@@ -1,15 +1,15 @@
 .ei-editor{
   position: relative;
   .ei-markdown-help{
-    width: 400px;
+    width: 320px;
     height: 300px;
     position: absolute;
     background: white;
-    top: -10px;
-    right: -40px;
+    top: 22px;
+    right: -20px;
     border: 1px solid #E2E2E2;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 15px 40px;
     ul{
       list-style-type: none;
       margin:0;
@@ -35,4 +35,22 @@
       }
     }
   }
+}
+
+.help{
+  font-size: 11px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+// Helper Classes
+.align-center{
+  text-align: center;
+}
+.align-left{
+  text-align: left;
+}
+
+.align-right{
+  text-align: right;
 }

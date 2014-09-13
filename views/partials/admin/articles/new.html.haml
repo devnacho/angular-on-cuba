@@ -1,5 +1,7 @@
 .page-header
-  %h1 NEW ARTICLE
+  %h1{ng: {hide: "newArticle.title"}} New Article
+  %h1{ng: {show: "newArticle.title"}}
+    {{newArticle.title}}
   %a{ href: "/admin/articles" } Go Back
 
 %input.form-control{ ng: { model: "newArticle.title" }, type: "text", placeholder: "Article title" }
