@@ -8,7 +8,6 @@ var directive = function() {
         },
         link: function(scope, element, attrs) {
           scope.showHelp = false;
-
           scope.mdHeaders = [{syntax: "# H1", insertText: "# Insert your H1 here"},
                             {syntax: "## H2", insertText: "## Insert your H2 here"},
                             {syntax: "### H3", insertText: "### Insert your H3 here"},
@@ -25,14 +24,6 @@ var directive = function() {
               scope.content += syntax.insertText;
             } else {
               scope.content += "\n"+ syntax.insertText;
-            }
-          };
-
-          scope.toggleHelp = function() {
-            if(scope.showHelp){
-              scope.showHelp = false;
-            }else{
-              scope.showHelp = true;
             }
           };
         }
