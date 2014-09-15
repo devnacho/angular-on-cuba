@@ -1,4 +1,4 @@
-var directive = function() {
+function eiMarked() {
   return {
         restrict: 'AE',
         replace: 'true',
@@ -13,4 +13,6 @@ var directive = function() {
     };
 };
 
-angular.module('myBlog').directive('eiMarked', directive);
+angular
+  .module('myBlog')
+  .directive('eiMarked', eiMarked);
