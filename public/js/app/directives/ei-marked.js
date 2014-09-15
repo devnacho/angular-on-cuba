@@ -7,7 +7,9 @@ function eiMarked() {
         },
         link: function(scope, element, attrs) {
           scope.$watch("toConvert", function(newValue, oldValue) {
-            element.html(marked(scope.toConvert));
+            if(scope.toConvert) {
+              element.html(marked(scope.toConvert));
+            }
           });
         }
     };
