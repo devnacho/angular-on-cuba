@@ -1,6 +1,5 @@
 %h1 ARTICLES LIST
 %a.btn.btn-primary{ ui: { sref: "articles-new" } } New Article
-.articles{ ng: { repeat: "article in articles" } }
-  .article
-    %h3 {{article.title}}
-    %hr
+.article{ ng: { repeat: "article in articles" } }
+  %h3 {{article.title}}
+  %hr
