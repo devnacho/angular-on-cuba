@@ -31,9 +31,9 @@
 
 .help {
   font-size: 11px;
-  margin-bottom: 10px;
-  cursor: pointer; }
+  margin-bottom: 10px; }
   .help ul li {
+    cursor: pointer;
     padding: 7px 14px; }
     .help ul li.active {
       background: #46c9b9;

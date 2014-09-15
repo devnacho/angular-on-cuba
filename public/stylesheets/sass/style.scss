@@ -43,9 +43,9 @@ $primary-color: rgb(70, 201, 185);
 .help{
   font-size: 11px;
   margin-bottom: 10px;
-  cursor: pointer;
   ul{
     li{
+      cursor: pointer;
       padding: 7px 14px;
       &.active{
         background: rgb(70, 201, 185);
