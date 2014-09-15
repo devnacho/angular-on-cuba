@@ -12,3 +12,6 @@ Cuando arrancamos a prototipar es comodo arrancar con un servicio que persista L
 
 ## Partials
 - Ruta generica para partials para poder usar HAML (ojo con temas de seguridad, no production ready!)
+
+## markdown help
+- hack de clases para hacer que no se vea hasta que cargo todo -- [ref](http://stackoverflow.com/questions/17985390/angular-animate-ng-cloak-opacity)
