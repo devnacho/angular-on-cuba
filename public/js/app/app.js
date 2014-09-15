@@ -6,18 +6,18 @@
 
     $locationProvider.html5Mode(true);
 
-    $urlRouterProvider.otherwise('/admin/articles');
+    $urlRouterProvider.otherwise('/articles');
 
     $stateProvider
-        .state('articles-new', {
-            url: '/admin/articles/new',
-            templateUrl: '/partials/admin/articles/new.html',
-            controller: 'ArticlesNewController'
-        })
         .state('articles-index', {
-            url: '/admin/articles',
+            url: '/articles',
             templateUrl: '/partials/admin/articles/index.html',
             controller: 'ArticlesIndexController'
+        })
+        .state('articles-new', {
+            url: '/articles/new',
+            templateUrl: '/partials/admin/articles/new.html',
+            controller: 'ArticlesNewController'
         })
   }]);
 
