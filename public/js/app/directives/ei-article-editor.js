@@ -8,6 +8,7 @@ var directive = function() {
         },
         link: function(scope, element, attrs) {
           scope.showHelp = false;
+          scope.preview = false;
           scope.mdHeaders = [{syntax: "# H1", insertText: "# Insert your H1 here"},
                             {syntax: "## H2", insertText: "## Insert your H2 here"},
                             {syntax: "### H3", insertText: "### Insert your H3 here"},
