@@ -1,10 +1,18 @@
 .ei-editor
   .help.align-right
-    %span{ng: {click: "showHelp = !showHelp"}}
-      %i.fa.fa-paragraph
-      Markdown Help
-  %textarea.form-control{ ng: { model: "content", trim: "false" }, rows: "12", placeholder: "Article content" }
-  .ei-markdown-help.animate-show{ng: {show: "showHelp"}}
+    %ul.list-inline
+      %li{ng: {click: "preview = !preview"}}
+        %i.fa.fa-eye
+        Markdown Preview
+      %li{ng: {click: "showHelp = !showHelp"}}
+        %i.fa.fa-paragraph
+        Markdown Help
+  %div{ng: {show: "preview"}}
+    %ei-marked{"to-convert" => "content", ng: {show: "preview"}}
+  %div{ng: {hide: "preview"}}
+    %textarea.form-control{ ng: { model: "content", trim: "false" }, rows: "12", placeholder: "Article content" }
+
+  .ei-markdown-help{ng: {show: "showHelp"}}
     %h2 Markdown Help
     %h3 Headers
     %ul
