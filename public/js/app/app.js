@@ -9,7 +9,7 @@
     $urlRouterProvider.otherwise('/articles');
 
     $stateProvider
-        .state('articles-index', {
+        .state('articles', {
             url: '/articles',
             templateUrl: '/partials/admin/articles/index.html',
             controller: 'ArticlesIndexController'
