@@ -1,10 +1,10 @@
 .ei-editor
   .help.align-right
     %ul.list-inline
-      %li{ng: {click: "preview = !preview"}}
+      %li{ng: {click: "preview = !preview", class: "{active: preview}"}}
         %i.fa.fa-eye
         Markdown Preview
-      %li{ng: {click: "showHelp = !showHelp"}}
+      %li{ng: {click: "showHelp = !showHelp", class: "{active: showHelp}"}}
         %i.fa.fa-paragraph
         Markdown Help
   %div{ng: {show: "preview"}}
