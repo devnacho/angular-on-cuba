@@ -49,24 +49,25 @@
 .align-right {
   text-align: right; }
 
-.ei-markdown-help.ng-hide-add {
-  -webkit-transition: 0.1s linear all;
-  -moz-transition: 0.1s linear all;
-  -o-transition: 0.1s linear all;
-  transition: 0.1s linear all;
-  opacity: 1; }
-
-.ei-markdown-help.ng-hide-add.ng-hide-add-active {
-  opacity: 0; }
-
-.ei-markdown-help.ng-hide-remove {
-  -webkit-transition: 0.1s linear all;
-  -moz-transition: 0.1s linear all;
-  -o-transition: 0.1s linear all;
-  transition: 0.1s linear all;
-  opacity: 0; }
-
-.ei-markdown-help.ng-hide-remove.ng-hide-remove-active {
-  opacity: 1; }
+.ei-markdown-help {
+  display: none; }
+  .ei-markdown-help.visible {
+    display: block; }
+  .ei-markdown-help.ng-hide-add {
+    -webkit-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+    opacity: 1; }
+    .ei-markdown-help.ng-hide-add.ng-hide-add-active {
+      opacity: 0; }
+  .ei-markdown-help.ng-hide-remove {
+    -webkit-transition: opacity 0.1s linear;
+    -moz-transition: opacity 0.1s linear;
+    -o-transition: opacity 0.1s linear;
+    transition: opacity 0.1s linear;
+    opacity: 0; }
+    .ei-markdown-help.ng-hide-remove.ng-hide-remove-active {
+      opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */

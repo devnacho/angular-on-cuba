@@ -12,10 +12,10 @@
   %div{ ng: { hide: "preview" } }
     %textarea.form-control{ ng: { model: "content", trim: "false" }, rows: "12", placeholder: "Article content" }
 
-  .ei-markdown-help{ ng: { show: "showHelp" } }
-    %h2 Markdown Help
-    %h3 Headers
-    %ul
-      %li{ ng: { repeat: 'mdHeader in mdHeaders' } }
-        %a.insert{ href: true, ng: { click: "insert(mdHeader)" } } insert
-        {{mdHeader.syntax}}
+    .ei-markdown-help{ ng: { class: "{visible: true}", show: "showHelp" } }
+      %h2 Markdown Help
+      %h3 Headers
+      %ul
+        %li{ ng: { repeat: 'mdHeader in mdHeaders' } }
+          %a.insert{ href: true, ng: { click: "insert(mdHeader)" } } insert
+          {{mdHeader.syntax}}
