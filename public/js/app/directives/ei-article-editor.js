@@ -1,4 +1,4 @@
-var directive = function() {
+function eiArticleEditor() {
   return {
         restrict: 'AE',
         replace: 'true',
@@ -31,4 +31,6 @@ var directive = function() {
     };
 };
 
-angular.module('myBlog').directive('eiArticleEditor', directive);
+angular
+  .module('myBlog')
+  .directive('eiArticleEditor', eiArticleEditor);
