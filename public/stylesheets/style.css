@@ -40,15 +40,6 @@
       border-radius: 3px;
       color: white; }
 
-.align-center {
-  text-align: center; }
-
-.align-left {
-  text-align: left; }
-
-.align-right {
-  text-align: right; }
-
 .ei-markdown-help {
   display: none; }
   .ei-markdown-help.visible {
