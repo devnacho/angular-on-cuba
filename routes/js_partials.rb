@@ -1,7 +1,7 @@
-class Partials < Cuba
+class JsPartials < Cuba
 
   def js_partial(route)
-    partial(File.join("/partials", route))
+    partial(File.join("/js_partials", route))
   end
 
   define do

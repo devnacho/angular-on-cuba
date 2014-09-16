@@ -16,8 +16,8 @@ Cuba.define do
     run Admin
   end
 
-  on 'partials' do
-    run Partials
+  on 'js_partials' do
+    run JsPartials
   end
 
   on default do
