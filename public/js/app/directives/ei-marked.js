@@ -8,8 +8,8 @@ function eiMarked() {
         },
         link: function(scope, element, attrs) {
           scope.$watch("preview", function(newValue, oldValue) {
-            if(scope.preview && scope.toConvert) {
-              element.html(marked(scope.toConvert));
+            if(scope.preview) {
+              element.html(marked(scope.toConvert || ""));
             }
           });
         }
