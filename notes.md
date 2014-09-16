@@ -7,6 +7,11 @@
 - use ui-sref
 - ojo con usar `.` en los state names, porque significa nested states! (dar mini explicacion?)
 
+## Directives
+- Attribute vs Element:
+  - When should I use an attribute versus an element? Use an element when you are creating a component that is in control of the template. The common case for this is when you are creating a Domain-Specific Language for parts of your template. Use an attribute when you are decorating an existing element with new functionality. -- [ref](https://docs.angularjs.org/guide/directive)
+
+
 ## LocalStorage first
 Cuando arrancamos a prototipar es comodo arrancar con un servicio que persista LocalStorage del browser y después es cuestión de cambiar el servicio o crear un nuevo servicio que se conecte con la API que realizaremos en CUBA
 
