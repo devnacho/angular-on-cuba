@@ -3,11 +3,12 @@ function eiMarked() {
         restrict: 'AE',
         replace: 'true',
         scope: {
-          toConvert: '='
+          toConvert: '=',
+          preview: '='
         },
         link: function(scope, element, attrs) {
-          scope.$watch("toConvert", function(newValue, oldValue) {
-            if(scope.toConvert) {
+          scope.$watch("preview", function(newValue, oldValue) {
+            if(scope.preview && scope.toConvert) {
               element.html(marked(scope.toConvert));
             }
           });

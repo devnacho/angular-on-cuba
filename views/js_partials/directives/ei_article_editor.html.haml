@@ -8,7 +8,7 @@
         %i.fa.fa-paragraph
         Markdown Help
   %div{ ng: { show: "preview" } }
-    %ei-marked{ "to-convert" => "content", ng: { show: "preview" } }
+    %ei-marked{ preview: "preview", "to-convert" => "content", ng: { show: "preview" } }
   %div{ ng: { hide: "preview" } }
     %textarea.form-control{ ng: { model: "content", trim: "false" }, rows: "12", placeholder: "Article content" }
 
