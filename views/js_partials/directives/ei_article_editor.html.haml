@@ -1,7 +1,7 @@
 .ei-editor
   .help.text-right
     %ul.list-inline
-      %li{ ng: { click: "preview = !preview", class: "{active: preview}" } }
+      %li{ ng: { click: "togglePreview()", class: "{active: preview}" } }
         %i.fa.fa-eye
         Markdown Preview
       %li{ ng: { click: "showHelp = !showHelp", class: "{active: showHelp}" } }

@@ -16,6 +16,10 @@ function eiArticleEditor() {
                             {syntax: "##### H5", insertText: "##### Insert your H5 here"},
                             {syntax: "###### H6", insertText: "###### Insert your H6 here"}];
 
+          scope.togglePreview = function(){
+            scope.preview = !scope.preview;
+          }
+
           scope.insert = function(syntax) {
             if(scope.content == undefined){
               scope.content = syntax.insertText;
