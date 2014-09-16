@@ -15,3 +15,7 @@ Cuando arrancamos a prototipar es comodo arrancar con un servicio que persista L
 
 ## markdown help
 - hack de clases para hacer que no se vea hasta que cargo todo -- [ref](http://stackoverflow.com/questions/17985390/angular-animate-ng-cloak-opacity)
+
+## Loading
+- events on ui-router -- [ref](http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.$state)
+
