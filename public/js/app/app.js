@@ -21,14 +21,16 @@
         })
   }]);
 
-  app.controller('ArticlesNewController', function($scope){
+  app.controller('ArticlesNewController',
+                ['$scope', function($scope){
     $scope.newArticle = {};
-  });
+  }]);
 
-  app.controller('ArticlesIndexController', function($scope){
+  app.controller('ArticlesIndexController',
+                 ['$scope', function($scope){
     $scope.articles = [];
     $scope.articles = [{title: "My first blog post"},
                        {title: "I think this is quite interesting"}];
-  });
+  }]);
 
 })();
