@@ -1,5 +1,21 @@
 $primary-color: rgb(70, 201, 185);
 
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .loading-box {
+    background: #f9edbe;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 4px 0;
+    text-align: center;
+    width: 110px;
+  }
+}
+
 .ei-editor{
   position: relative;
   .ei-markdown-help{
@@ -10,7 +26,7 @@ $primary-color: rgb(70, 201, 185);
     top: 32px;
     right: -10px;
     border: 1px solid #E2E2E2;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
     padding: 15px 40px;
     ul{
       list-style-type: none;
