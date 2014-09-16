@@ -20,6 +20,10 @@ function eiArticleEditor() {
             scope.preview = !scope.preview;
           }
 
+          scope.toggleHelp = function(){
+            scope.showHelp = !scope.showHelp;
+          }
+
           scope.insert = function(syntax) {
             if(scope.content == undefined){
               scope.content = syntax.insertText;
