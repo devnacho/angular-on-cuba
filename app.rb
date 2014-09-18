@@ -1,6 +1,7 @@
 require 'cuba'
 require "cuba/render"
 require 'sass/plugin/rack'
+require 'json'
 
 Cuba.plugin Cuba::Render
 Cuba.settings[:render][:template_engine] = "haml"
@@ -14,6 +15,10 @@ Dir["./routes/**/*.rb"].each  { |rb| require rb }
 Cuba.define do
   on 'admin' do
     run Admin
+  end
+
+  on 'api' do
+    run Api
   end
 
   on 'js_partials' do
