@@ -25,5 +25,8 @@ Cuando arrancamos a prototipar es comodo arrancar con un servicio que persista L
 ## Loading
 - events on ui-router -- [ref](http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.$state)
 
+## API
+- $http vs [$resource](https://docs.angularjs.org/api/ngResource/service/$resource)
+
 ## general
 - Agregar la dependencia en todos lados (eg: ngResource)
