@@ -33,3 +33,7 @@ Para que puedan entender las ventajas facilmente podemos hacer un quick rails sc
 
 ## general
 - Agregar la dependencia en todos lados (eg: ngResource)
+
+## UI Router
+Para poder cambiar de estado en los diferentes jsControllers hay que inyectar $state.
+De esta manera se puede hacer $state.go('articles'); por ejemplo.
