@@ -1,12 +1,15 @@
 require 'cuba'
 require "cuba/render"
+require 'json'
+require 'rack/parser'
 require "ohm"
 require 'sass/plugin/rack'
-require 'json'
 
 Cuba.plugin Cuba::Render
 Cuba.settings[:render][:template_engine] = "haml"
+
 Cuba.use Sass::Plugin::Rack
+Cuba.use Rack::Parser
 
 
 Dir["./lib/**/*.rb"].each     { |rb| require rb }
