@@ -1,10 +1,8 @@
-function ArticlesIndexController($scope){
-    $scope.articles = [];
-    $scope.articles = [{title: "My first blog post"},
-                       {title: "I think this is quite interesting"}];
+function ArticlesIndexController($scope, Article){
+    $scope.articles = Article.query();
 }
 
 angular
   .module('myBlog')
   .controller('ArticlesIndexController',
-                ['$scope', ArticlesIndexController]);
+                ['$scope', 'Article', ArticlesIndexController]);

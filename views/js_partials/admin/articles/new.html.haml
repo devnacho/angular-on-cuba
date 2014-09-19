@@ -1,7 +1,9 @@
 .page-header
-  %h1 {{ newArticle.title || "New Article" }}
+  %h1 {{ article.title || "New Article" }}
   %a{ href: "/admin/articles" } Go Back
 
-%input.form-control{ ng: { model: "newArticle.title" }, type: "text", placeholder: "Article title" }
+%input.form-control{ ng: { model: "article.title" }, type: "text", placeholder: "Article title" }
 %br
-%ei-article-editor{ content: "newArticle.content" }
+%ei-article-editor{ content: "article.body" }
+%br
+%button.btn.btn-success{ ng: { click: 'save()' } } Publish

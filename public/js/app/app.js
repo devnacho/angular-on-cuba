@@ -1,5 +1,5 @@
 (function(){
-  var app = angular.module('myBlog', ['ngAnimate','ui.router']);
+  var app = angular.module('myBlog', ['ngAnimate','ui.router', 'ngResource']);
 
   app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
              function($stateProvider, $urlRouterProvider, $locationProvider) {

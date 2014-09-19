@@ -28,3 +28,8 @@ Cuando arrancamos a prototipar es comodo arrancar con un servicio que persista L
 ## Comparacion
 Para que puedan entender las ventajas facilmente podemos hacer un quick rails scaffolding y mostrar como siempre hace page reload y que para cada interacción deberíamos agregar código extra js o plugins.
 
+## API
+- $http vs [$resource](https://docs.angularjs.org/api/ngResource/service/$resource)
+
+## general
+- Agregar la dependencia en todos lados (eg: ngResource)
