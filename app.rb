@@ -1,5 +1,6 @@
 require 'cuba'
 require "cuba/render"
+require "ohm"
 require 'sass/plugin/rack'
 require 'json'
 

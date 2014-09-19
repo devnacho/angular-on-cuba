@@ -11,23 +11,22 @@ class Api < Cuba
 
       on get, root do
         json do
-          [
-            { title: "foo", body: "bar" },
-            { title: "baz", body: "biz" }
-          ]
+          Post.all.map(&:to_hash)
         end
       end
 
       on get, ':id' do |id|
         json do
-          { title: "foo", body: "bar" }
+          Post[id].to_hash
         end
       end
 
       on post, root do
-        res.status = 204
+        post = Post.create title: req.params["title"],
+                           body: req.params["body"]
+
         json do
-          {}
+          post.to_hash
         end
       end
 
