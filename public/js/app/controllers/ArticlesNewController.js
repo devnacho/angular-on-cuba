@@ -1,8 +1,12 @@
-function ArticlesNewController($scope){
-  $scope.newArticle = {};
+function ArticlesNewController($scope, Article){
+  $scope.article = new Article();
+
+  $scope.save = function(){
+    $scope.article.$save();
+  }
 }
 
 angular
   .module('myBlog')
   .controller('ArticlesNewController',
-              ['$scope', ArticlesNewController]);
+              ['$scope', 'Article', ArticlesNewController]);

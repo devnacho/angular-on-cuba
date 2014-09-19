@@ -24,6 +24,13 @@ class Api < Cuba
         end
       end
 
+      on post, root do
+        res.status = 204
+        json do
+          {}
+        end
+      end
+
     end
   end
 
