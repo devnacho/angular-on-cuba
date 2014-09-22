@@ -9,19 +9,21 @@ class Api < Cuba
   define do
     on 'articles' do
 
-      on get, root do
-        json do
-          Article.all.map(&:to_hash)
+      on root do
+        on get do
+          json do
+            Article.all.map(&:to_hash)
+          end
         end
-      end
 
-      on post, root do
-        article = Article.create title: req.params["title"],
-                                 body: req.params["body"]
+        on post do
+          article = Article.create title: req.params["title"],
+                                  body: req.params["body"]
 
-        res.status = 201
-        json do
-          article.to_hash
+          res.status = 201
+          json do
+            article.to_hash
+          end
         end
       end
 
