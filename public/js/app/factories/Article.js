@@ -1,5 +1,5 @@
 function Article($resource){
-  return $resource('/api/articles/:id', {}, { });
+  return $resource('/api/articles/:id', { id: '@id' }, { });
 }
 
 angular
