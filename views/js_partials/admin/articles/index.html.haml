@@ -2,6 +2,8 @@
 %a.btn.btn-primary{ ui: { sref: "articles-new" } } New Article
 .article{ ng: { repeat: "article in articles" } }
   %h3 {{article.title}}
+  %a.btn.btn-sm.btn-default{ href: "", ui: { sref: "articles-edit" } }
+    %i.fa.fa-edit
   %a.btn.btn-sm.btn-danger{ href: "", ng: { click: "remove($index)" } }
     %i.fa.fa-times
   %hr

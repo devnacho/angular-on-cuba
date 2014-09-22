@@ -2,8 +2,8 @@ function ArticlesIndexController($scope, Article){
     $scope.articles = Article.query();
 
     $scope.remove = function (index) {
-      console.log($scope.articles[index]);
       $scope.articles[index].$remove();
+      $scope.articles.splice(index, 1);
     }
 
 }
