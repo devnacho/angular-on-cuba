@@ -15,18 +15,38 @@ class Api < Cuba
         end
       end
 
-      on get, ':id' do |id|
+      on post, root do
+        article = Post.create title: req.params["title"],
+                              body: req.params["body"]
+
+        res.status = 201
         json do
-          Post[id].to_hash
+          article.to_hash
         end
       end
 
-      on post, root do
-        post = Post.create title: req.params["title"],
-                           body: req.params["body"]
+      on ':id' do |id|
+        article = Post[id]
 
-        json do
-          post.to_hash
+        on get do
+          json do
+            article.to_hash
+          end
+        end
+
+        on put do
+          article.update(title: req.params["title"],
+                         body: req.params["body"])
+
+          json do
+            article.to_hash
+          end
+        end
+
+        on delete do
+          article.delete
+
+          res.status = 204
         end
       end
 
