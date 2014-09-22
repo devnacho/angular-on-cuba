@@ -11,13 +11,13 @@ class Api < Cuba
 
       on get, root do
         json do
-          Post.all.map(&:to_hash)
+          Article.all.map(&:to_hash)
         end
       end
 
       on post, root do
-        article = Post.create title: req.params["title"],
-                              body: req.params["body"]
+        article = Article.create title: req.params["title"],
+                                 body: req.params["body"]
 
         res.status = 201
         json do
@@ -26,7 +26,7 @@ class Api < Cuba
       end
 
       on ':id' do |id|
-        article = Post[id]
+        article = Article[id]
 
         on get do
           json do

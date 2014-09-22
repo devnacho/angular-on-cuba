@@ -1,4 +1,4 @@
-class Post < Ohm::Model
+class Article < Ohm::Model
   attribute :title
   attribute :body
 
