@@ -1,16 +1,3 @@
-#loading {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; }
-  #loading .loading-box {
-    background: #f9edbe;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    padding: 4px 0;
-    text-align: center;
-    width: 110px; }
-
 .ei-editor {
   position: relative; }
   .ei-editor .ei-markdown-help {
@@ -42,17 +29,6 @@
           visibility: visible;
           text-decoration: none; }
 
-.help {
-  font-size: 11px;
-  margin-bottom: 10px; }
-  .help ul li {
-    cursor: pointer;
-    padding: 7px 14px; }
-    .help ul li.active {
-      background: #46c9b9;
-      border-radius: 3px;
-      color: white; }
-
 .ei-markdown-help {
   display: none; }
   .ei-markdown-help.visible {
@@ -73,5 +49,29 @@
     opacity: 0; }
     .ei-markdown-help.ng-hide-remove.ng-hide-remove-active {
       opacity: 1; }
+
+#loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; }
+  #loading .loading-box {
+    background: #f9edbe;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 4px 0;
+    text-align: center;
+    width: 110px; }
+
+.help {
+  font-size: 11px;
+  margin-bottom: 10px; }
+  .help ul li {
+    cursor: pointer;
+    padding: 7px 14px; }
+    .help ul li.active {
+      background: #46c9b9;
+      border-radius: 3px;
+      color: white; }
 
 /*# sourceMappingURL=style.css.map */

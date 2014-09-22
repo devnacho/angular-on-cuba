@@ -1,3 +1,6 @@
+@import 'ei-editor';
+@import 'ei-marked';
+
 $primary-color: rgb(70, 201, 185);
 
 #loading {
@@ -16,46 +19,6 @@ $primary-color: rgb(70, 201, 185);
   }
 }
 
-.ei-editor{
-  position: relative;
-  .ei-markdown-help{
-    width: 320px;
-    height: 300px;
-    position: absolute;
-    background: white;
-    top: 32px;
-    right: -10px;
-    border: 1px solid #E2E2E2;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
-    padding: 15px 40px;
-    ul{
-      list-style-type: none;
-      margin:0;
-      padding-left: 0;
-      li{
-        margin:0;
-        padding: 0;
-        a.insert{
-          visibility: hidden;
-          color:white;
-          font-size: 11px;
-          background: #ccc;
-          padding:2px 10px;
-          margin-right: 4px;
-          border-radius: 3px;
-        }
-        &:hover{
-          a.insert{
-            visibility: visible;
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
-}
-
-
 .help{
   font-size: 11px;
   margin-bottom: 10px;
@@ -72,36 +35,3 @@ $primary-color: rgb(70, 201, 185);
   }
 }
 
-// directives
-.ei-markdown-help {
-  display: none;
-
-  &.visible {
-    display: block;
-  }
-
-  &.ng-hide-add {
-    -webkit-transition: opacity 0.1s linear;
-    -moz-transition: opacity 0.1s linear;
-    -o-transition: opacity 0.1s linear;
-    transition: opacity 0.1s linear;
-    opacity: 1;
-
-    &.ng-hide-add-active {
-      opacity: 0;
-    }
-  }
-
-  &.ng-hide-remove {
-    -webkit-transition: opacity 0.1s linear;
-    -moz-transition: opacity 0.1s linear;
-    -o-transition: opacity 0.1s linear;
-    transition: opacity 0.1s linear;
-    opacity: 0;
-
-
-    &.ng-hide-remove-active {
-      opacity: 1;
-    }
-  }
-}
