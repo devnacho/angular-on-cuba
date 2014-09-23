@@ -37,3 +37,6 @@ Para que puedan entender las ventajas facilmente podemos hacer un quick rails sc
 ## UI Router
 Para poder cambiar de estado en los diferentes jsControllers hay que inyectar $state.
 De esta manera se puede hacer $state.go('articles'); por ejemplo.
+
+## Ohm
+- Agregar Ohm::Timestamps de entrada, para no tener problemas de migraciones
