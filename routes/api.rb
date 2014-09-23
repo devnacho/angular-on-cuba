@@ -11,9 +11,7 @@ class Api < Cuba
 
       on root do
         on get do
-          json do
-            Article.all.map(&:to_hash)
-          end
+          json Article.all
         end
 
         on post do
@@ -21,9 +19,7 @@ class Api < Cuba
                                   body: req.params["body"]
 
           res.status = 201
-          json do
-            article.to_hash
-          end
+          json article
         end
       end
 
@@ -31,18 +27,14 @@ class Api < Cuba
         article = Article[id]
 
         on get do
-          json do
-            article.to_hash
-          end
+          json article
         end
 
         on post do
           article.update(title: req.params["title"],
                          body: req.params["body"])
 
-          json do
-            article.to_hash
-          end
+          json article
         end
 
         on delete do
