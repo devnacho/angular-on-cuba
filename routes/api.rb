@@ -18,7 +18,7 @@ class Api < Cuba
           request = CreateArticle.new req.params
 
           on request.valid? do
-            article = Article.create request.params
+            article = Article.create request.attributes
             res.status = 201
             json article
           end
