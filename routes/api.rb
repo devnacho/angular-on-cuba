@@ -15,12 +15,18 @@ class Api < Cuba
         end
 
         on post do
-          article = Article.create title: req.params["title"],
-                                   body: req.params["body"],
-                                   tags: req.params["tags"]
+          request = CreateArticle.new req.params
 
-          res.status = 201
-          json article
+          on request.valid? do
+            article = Article.create request.params
+            res.status = 201
+            json article
+          end
+
+          on default do
+            res.status = 422
+            json request.errors
+          end
         end
       end
 
