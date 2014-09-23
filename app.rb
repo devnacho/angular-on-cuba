@@ -5,6 +5,7 @@ require 'rack/parser'
 require "ohm"
 require "ohm/json"
 require "ohm/contrib"
+require "scrivener"
 require 'sass/plugin/rack'
 
 Cuba.plugin Cuba::Render
