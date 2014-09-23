@@ -6,4 +6,6 @@
 %br
 %ei-article-editor{ content: "article.body" }
 %br
+%input.form-control{ ng: { model: "article.tags" }, type: "text", placeholder: "tags" }
+%br
 %button.btn.btn-success{ ng: { click: 'save()' } } Publish
