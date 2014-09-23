@@ -16,7 +16,8 @@ class Api < Cuba
 
         on post do
           article = Article.create title: req.params["title"],
-                                  body: req.params["body"]
+                                   body: req.params["body"],
+                                   tags: req.params["tags"]
 
           res.status = 201
           json article
@@ -31,8 +32,9 @@ class Api < Cuba
         end
 
         on post do
-          article.update(title: req.params["title"],
-                         body: req.params["body"])
+          article.update title: req.params["title"],
+                         body: req.params["body"],
+                         tags: req.params["tags"]
 
           json article
         end
