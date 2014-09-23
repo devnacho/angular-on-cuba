@@ -3,10 +3,8 @@ class Article < Ohm::Model
   attribute :body
 
   def to_hash
-    {
-      id: id,
-      title: title,
-      body: body
-    }
+    super.merge title: title,
+                body: body
+
   end
 end
