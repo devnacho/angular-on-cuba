@@ -19,6 +19,12 @@
             templateUrl: '/js_partials/admin/articles/new.html',
             controller: 'ArticlesNewController'
         })
+        .state('articles-edit', {
+            url: '/articles/:id/edit',
+            templateUrl: '/js_partials/admin/articles/edit.html',
+            controller: 'ArticlesEditController'
+        })
+
   }]);
 
 })();

@@ -50,6 +50,9 @@
     .ei-markdown-help.ng-hide-remove.ng-hide-remove-active {
       opacity: 1; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
 #loading {
   position: absolute;
   top: 0;
@@ -73,5 +76,8 @@
       background: #46c9b9;
       border-radius: 3px;
       color: white; }
+
+.articles-index .header {
+  margin: 40px 0; }
 
 /*# sourceMappingURL=style.css.map */

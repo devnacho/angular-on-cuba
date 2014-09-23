@@ -3,6 +3,10 @@
 
 $primary-color: rgb(70, 201, 185);
 
+h1, h2, h3, h4, h5, h6{
+  margin:0;
+}
+
 #loading {
   position: absolute;
   top: 0;
@@ -35,3 +39,11 @@ $primary-color: rgb(70, 201, 185);
   }
 }
 
+.articles-index{
+  .header{
+    margin:40px 0;
+  }
+  .articles{
+
+  }
+}

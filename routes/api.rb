@@ -36,7 +36,7 @@ class Api < Cuba
           end
         end
 
-        on put do
+        on post do
           article.update(title: req.params["title"],
                          body: req.params["body"])
 

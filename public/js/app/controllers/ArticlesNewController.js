@@ -1,4 +1,4 @@
-function ArticlesNewController($scope, Article, $state){
+function ArticlesNewController($scope, $state, Article){
   $scope.article = new Article();
 
   $scope.save = function(){
@@ -11,4 +11,4 @@ function ArticlesNewController($scope, Article, $state){
 angular
   .module('myBlog')
   .controller('ArticlesNewController',
-              ['$scope', 'Article', '$state', ArticlesNewController]);
+              ['$scope', '$state', 'Article', ArticlesNewController]);
