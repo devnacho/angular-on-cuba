@@ -37,13 +37,18 @@ class Api < Cuba
           json article
         end
 
-        on post do
-          article.update title: req.params["title"],
-                         body: req.params["body"],
-                         tags: req.params["tags"],
-                         published: req.params["published"]
+        on put do
+          publisher = Publisher.new req.params
 
-          json article
+          on publisher.valid? do
+            article.update publisher.attributes
+            json article
+          end
+
+          on default do
+            res.status = 422
+            json publisher.errors
+          end
         end
 
         on delete do

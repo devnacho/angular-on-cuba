@@ -3,7 +3,7 @@ function ArticlesEditController($scope, $state, $stateParams, Article){
   });
 
   $scope.save = function(){
-    $scope.article.$save(function(data){
+    $scope.article.$update(function(data){
       $state.go('articles');
     });
   }
