@@ -15,17 +15,17 @@ class Api < Cuba
         end
 
         on post do
-          request = CreateArticle.new req.params
+          publisher = Publisher.new req.params
 
-          on request.valid? do
-            article = Article.create request.attributes
+          on publisher.valid? do
+            article = Article.create publisher.attributes
             res.status = 201
             json article
           end
 
           on default do
             res.status = 422
-            json request.errors
+            json publisher.errors
           end
         end
       end

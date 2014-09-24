@@ -1,4 +1,4 @@
-class CreateArticle < Scrivener
+class Publisher < Scrivener
   attr_accessor :title, :body, :tags, :published
 
   def validate
