@@ -1,5 +1,5 @@
 class CreateArticle < Scrivener
-  attr_accessor :title, :body, :tags
+  attr_accessor :title, :body, :tags, :published
 
   def validate
     assert_present :title

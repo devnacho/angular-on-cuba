@@ -11,5 +11,9 @@
   %li{ ng: { repeat: "tag in article.tags track by $index" } }
     {{tag}}
 
-%br
-%button.btn.btn-success{ ng: { click: 'save()' } } Publish
+.checkbox
+  %label
+    %input{ type: 'checkbox', ng: { model: 'article.published' } }
+    Publish
+
+%button.btn.btn-success{ ng: { click: 'save()' } } Save

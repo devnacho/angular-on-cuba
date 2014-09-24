@@ -40,7 +40,8 @@ class Api < Cuba
         on post do
           article.update title: req.params["title"],
                          body: req.params["body"],
-                         tags: req.params["tags"]
+                         tags: req.params["tags"],
+                         published: req.params["published"]
 
           json article
         end
