@@ -11,7 +11,7 @@ class Api < Cuba
 
       on root do
         on get do
-          json Article.all
+          json Article.all.sort_by(:created_at, order: "DESC")
         end
 
         on post do
