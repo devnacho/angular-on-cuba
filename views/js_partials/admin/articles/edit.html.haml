@@ -7,8 +7,9 @@
 %ei-article-editor{ content: "article.body" }
 %br
 %input.form-control{ ng: { model: "article.tags", list: true }, type: "text", placeholder: "Tags" }
-%div{ ng: { repeat: "tag in article.tags" } }
-  {{tag}}
+%ul
+  %li{ ng: { repeat: "tag in article.tags" } }
+    {{tag}}
 
 %br
 %button.btn.btn-success{ ng: { click: 'save()' } } Save
