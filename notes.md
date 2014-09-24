@@ -16,6 +16,7 @@
 ## Tags
 Usamos ngList para hacer una interaccion copada con el string delimitado por comas
 https://docs.angularjs.org/api/ng/directive/ngList
+- En el repeat, usamos `track by $index` para que no pinche con duplicados -- [ref](https://docs.angularjs.org/error/ngRepeat/dupes?p0=tag%20in%20article.tags&p1=string:tag&p2=%22tag%22)
 
 ## LocalStorage first
 Cuando arrancamos a prototipar es comodo arrancar con un servicio que persista LocalStorage del browser y después es cuestión de cambiar el servicio o crear un nuevo servicio que se conecte con la API que realizaremos en CUBA

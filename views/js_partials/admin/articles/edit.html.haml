@@ -8,7 +8,7 @@
 %br
 %input.form-control{ ng: { model: "article.tags", list: true }, type: "text", placeholder: "Tags" }
 %ul
-  %li{ ng: { repeat: "tag in article.tags" } }
+  %li{ ng: { repeat: "tag in article.tags track by $index" } }
     {{tag}}
 
 %br
