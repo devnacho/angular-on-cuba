@@ -1,19 +1,22 @@
-.page-header
-  %h1 {{ article.title}}
-  %a{ href: "/admin/articles" } Go Back
+.row
+  .col-md-12
+    .page-header
+      %h1 {{ article.title}}
+.row
+  .col-md-9
+    %input.form-control{ ng: { model: "article.title" }, type: "text", placeholder: "Article title" }
+    %br
+    %ei-article-editor{ content: "article.body" }
+    .checkbox
+      %label
+        %input{ type: 'checkbox', ng: { model: 'article.published' } }
+        Publish
 
-%input.form-control{ ng: { model: "article.title" }, type: "text", placeholder: "Article title" }
-%br
-%ei-article-editor{ content: "article.body" }
-%br
-%input.form-control{ ng: { model: "article.tags", list: true }, type: "text", placeholder: "Tags" }
-%ul
-  %li{ ng: { repeat: "tag in article.tags track by $index" } }
-    {{tag}}
-
-.checkbox
-  %label
-    %input{ type: 'checkbox', ng: { model: 'article.published' } }
-    Publish
-
-%button.btn.btn-success{ ng: { click: 'save()' } } Save
+    %hr
+    %ul.list-inline
+      %li
+        %button.btn.btn-success.btn-lg{ ng: { click: 'save()' } } Save
+      %li
+        %a{ href: "/admin/articles" } Go Back
+  .col-md-3
+    %ei-tags{ tags: "article.tags" }

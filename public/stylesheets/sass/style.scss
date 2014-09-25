@@ -1,10 +1,13 @@
-@import 'ei-editor';
-@import 'ei-marked';
-
 $primary-color: rgb(70, 201, 185);
 
+@import 'ei-editor';
+@import 'ei-marked';
+@import 'ei-tags';
+
+
+
 h1, h2, h3, h4, h5, h6{
-  margin:0;
+  margin-top:0;
 }
 
 #loading {

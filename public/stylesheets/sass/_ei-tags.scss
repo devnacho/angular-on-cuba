@@ -1,0 +1,16 @@
+.ei-tags{
+  ul.ei-tags-list{
+    margin:20px 0 0 0;
+    padding:0;
+    li{
+      margin: 0 0px 14px 0;
+      list-style-type: none;
+      span{
+        padding:5px 20px;
+        border-radius: 3px;
+        background: lighten(desaturate($primary-color, 10), 40);
+        color:darken($primary-color, 20);
+      }
+    }
+  }
+}

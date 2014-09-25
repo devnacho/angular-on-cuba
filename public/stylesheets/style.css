@@ -50,8 +50,20 @@
     .ei-markdown-help.ng-hide-remove.ng-hide-remove-active {
       opacity: 1; }
 
+.ei-tags ul.ei-tags-list {
+  margin: 20px 0 0 0;
+  padding: 0; }
+  .ei-tags ul.ei-tags-list li {
+    margin: 0 0px 14px 0;
+    list-style-type: none; }
+    .ei-tags ul.ei-tags-list li span {
+      padding: 5px 20px;
+      border-radius: 3px;
+      background: #e6f5f3;
+      color: #268378; }
+
 h1, h2, h3, h4, h5, h6 {
-  margin: 0; }
+  margin-top: 0; }
 
 #loading {
   position: absolute;
