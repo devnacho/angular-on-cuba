@@ -6,10 +6,16 @@
       .col-md-4
         .text-right
           %a.btn.btn-primary{ ui: { sref: "articles-new" } } New Article
-  .articles{ ng: { repeat: "article in articles" } }
+  .article{ ng: { repeat: "article in articles" } }
     .row
       .col-md-8
+        //{{article}}
         %h3 {{article.title}}
+        .date{ ng: { show: "article.published_at" } }
+          {{article.published_at | date:'mediumDate'}}
+        %span.label{ ng: { class: "{'label-success': article.published, 'label-default': !article.published }" } }
+          {{article.published ? 'published' : 'draft'}}
+
       .col-md-4
         .text-right
           %a.btn.btn-sm.btn-default{ href: "", ui: { sref: "articles-edit({ id: article.id })" } }
