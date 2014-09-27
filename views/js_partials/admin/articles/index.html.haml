@@ -13,13 +13,9 @@
           .input-group-addon
             %i.fa.fa-search
           %input.form-control{:placeholder => "Filter by title, content or tags.", :type => "text", ng: { model: "query" } }
-
-        //%input.form-control{ :placeholder => "Search", :type => "text", ng: { model: "query" } }
-
   .article{ ng: { repeat: "article in articles | filter:query" } }
     .row
       .col-md-8
-        //{{article}}
         %h3 {{article.title}}
         .date{ ng: { show: "article.published_at" } }
           {{article.published_at | date:'mediumDate'}}
