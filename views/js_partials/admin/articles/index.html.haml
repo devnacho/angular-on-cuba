@@ -6,7 +6,17 @@
       .col-md-4
         .text-right
           %a.btn.btn-primary{ ui: { sref: "articles-new" } } New Article
-  .article{ ng: { repeat: "article in articles" } }
+  .row
+    .col-md-3.col-md-offset-9
+      .search
+        .input-group
+          .input-group-addon
+            %i.fa.fa-search
+          %input.form-control{:placeholder => "Filter by title, content or tags.", :type => "text", ng: { model: "query" } }
+
+        //%input.form-control{ :placeholder => "Search", :type => "text", ng: { model: "query" } }
+
+  .article{ ng: { repeat: "article in articles | filter:query" } }
     .row
       .col-md-8
         //{{article}}
