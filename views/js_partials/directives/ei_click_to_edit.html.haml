@@ -1,0 +1,12 @@
+.ei-click-to-edit
+  .editable{ ng: { hide: "edit", click: "edit = true" } }
+    {{editableText}}
+    %i.fa.fa-pencil
+  %div{ ng: { show: "edit"} }
+    %form.form-inline
+      .form-group
+        %input.form-control{ ng: { model: "editableText" }, type: "text" }
+        %a.btn.btn-sm.btn-success{ href: "", ng: { click: "saveEdit()" } }
+          %i.fa.fa-check
+        %a.btn.btn-sm.btn-danger{ href: "", ng: { click: "discardEdit()" } }
+          %i.fa.fa-times

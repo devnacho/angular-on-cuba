@@ -1,10 +1,10 @@
 .row
-  .col-md-12
+  .col-md-9
     .page-header
-      %h1 {{ article.title}}
+      %h1
+        %ei-click-to-edit{ "editable-text" => "article.title" }
 .row
   .col-md-9
-    %input.form-control{ ng: { model: "article.title" }, type: "text", placeholder: "Article title" }
     %br
     %ei-article-editor{ content: "article.body" }
     .checkbox

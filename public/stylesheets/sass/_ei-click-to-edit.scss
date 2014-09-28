@@ -1,0 +1,16 @@
+.ei-click-to-edit{
+  .editable{
+    cursor: pointer;
+    i{
+      color:#cacaca;
+      margin-left: 5px;
+      font-size: 80%;
+      font-weight: normal;
+    }
+    &:hover{
+      i{
+        color:#999;
+      }
+    }
+  }
+}

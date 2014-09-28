@@ -62,6 +62,16 @@
       background: #e6f5f3;
       color: #268378; }
 
+.ei-click-to-edit .editable {
+  cursor: pointer; }
+  .ei-click-to-edit .editable i {
+    color: #cacaca;
+    margin-left: 5px;
+    font-size: 80%;
+    font-weight: normal; }
+  .ei-click-to-edit .editable:hover i {
+    color: #999; }
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0; }
 
