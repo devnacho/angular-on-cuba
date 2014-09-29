@@ -6,3 +6,4 @@ ohm -v 2.0.1
 rack-parser -v 0.6.0
 ohm-contrib -v 2.0.0
 scrivener -v 0.2.0
+shield -v 2.1.0

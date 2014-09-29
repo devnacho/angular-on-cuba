@@ -6,6 +6,7 @@ require "ohm"
 require "ohm/json"
 require "ohm/contrib"
 require "scrivener"
+require "shield"
 require 'sass/plugin/rack'
 
 Cuba.plugin Cuba::Render
@@ -21,6 +22,7 @@ Dir["./models/**/*.rb"].each  { |rb| require rb }
 Dir["./routes/**/*.rb"].each  { |rb| require rb }
 
 Cuba.plugin RouteHelpers
+Cuba.plugin Shield::Helpers
 
 Cuba.define do
   on 'admin' do
