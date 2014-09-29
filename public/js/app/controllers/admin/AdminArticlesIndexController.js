@@ -1,4 +1,4 @@
-function ArticlesIndexController($scope, Article){
+function AdminArticlesIndexController($scope, Article){
     $scope.articles = Article.query();
 
     $scope.remove = function (index) {
@@ -10,5 +10,5 @@ function ArticlesIndexController($scope, Article){
 
 angular
   .module('myBlog')
-  .controller('ArticlesIndexController',
-                ['$scope', 'Article', ArticlesIndexController]);
+  .controller('AdminArticlesIndexController',
+                ['$scope', 'Article', AdminArticlesIndexController]);

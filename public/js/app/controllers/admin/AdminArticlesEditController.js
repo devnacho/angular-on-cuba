@@ -1,4 +1,4 @@
-function ArticlesEditController($scope, $state, $stateParams, Article){
+function AdminArticlesEditController($scope, $state, $stateParams, Article){
   $scope.article = Article.get({ id: $stateParams.id }, function() {
   });
 
@@ -11,5 +11,5 @@ function ArticlesEditController($scope, $state, $stateParams, Article){
 
 angular
   .module('myBlog')
-  .controller('ArticlesEditController',
-              ['$scope',  '$state', '$stateParams', 'Article', ArticlesEditController]);
+  .controller('AdminArticlesEditController',
+              ['$scope',  '$state', '$stateParams', 'Article', AdminArticlesEditController]);

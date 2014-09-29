@@ -14,15 +14,15 @@
     %script{ src: "/vendor/angular-ui-router/release/angular-ui-router.js" }
     %script{ src: "/vendor/marked/lib/marked.js" }
     %script{ src: "/js/app/admin.js" }
-    %script{ src: "/js/app/controllers/AdminController.js" }
-    %script{ src: "/js/app/controllers/ArticlesIndexController.js" }
-    %script{ src: "/js/app/controllers/ArticlesNewController.js" }
-    %script{ src: "/js/app/controllers/ArticlesEditController.js" }
+    %script{ src: "/js/app/controllers/admin/AdminController.js" }
+    %script{ src: "/js/app/controllers/admin/AdminArticlesIndexController.js" }
+    %script{ src: "/js/app/controllers/admin/AdminArticlesNewController.js" }
+    %script{ src: "/js/app/controllers/admin/AdminArticlesEditController.js" }
     %script{ src: "/js/app/directives/ei-article-editor.js" }
     %script{ src: "/js/app/directives/ei-marked.js" }
     %script{ src: "/js/app/directives/ei-tags.js" }
     %script{ src: "/js/app/directives/ei-click-to-edit.js" }
-    %script{ src: "/js/app/factories/Article.js" }
+    %script{ src: "/js/app/factories/admin/Article.js" }
 
   %body{ ng: { controller: 'AdminController' } }
     #loading{ ng: { show: 'loading' } }

@@ -3,7 +3,7 @@ class Blog < Cuba
   define do
 
     on root do
-      render 'index'
+      res.write view("blog/blog_app")
     end
 
   end

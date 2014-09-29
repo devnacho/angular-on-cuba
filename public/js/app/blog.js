@@ -8,6 +8,13 @@
 
     $urlRouterProvider.otherwise('/');
 
+    $stateProvider
+        .state('articles', {
+            url: '/',
+            templateUrl: '/js_partials/blog/articles/index.html',
+            controller: 'ArticlesIndexController'
+        })
+
   }]);
 
 })();
