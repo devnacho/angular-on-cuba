@@ -1,5 +1,5 @@
 function Article($resource){
-  return $resource('/api/articles/:id',
+  return $resource('/api/admin/articles/:id',
                    { id: '@id' },
                    {
                      update: { method: 'PUT',
