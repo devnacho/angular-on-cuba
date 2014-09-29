@@ -3,7 +3,7 @@ class Blog < Cuba
   define do
 
     on root do
-      res.write "hello!"
+      render 'index'
     end
 
   end
