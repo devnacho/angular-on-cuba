@@ -10,7 +10,15 @@ class Api < Cuba
 
     on 'articles' do
       on get, root do
-        json Article.find(published: true).sort_by(:published_at, order: "DESC")
+        articles = Article.find(published: true)
+
+        on param("tag") do |tag|
+          json articles.find(tags: tag).sort_by(:published_at, order: "DESC")
+        end
+
+        on default do
+          json articles.sort_by(:published_at, order: "DESC")
+        end
       end
 
       on get ':id' do
