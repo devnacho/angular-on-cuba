@@ -14,6 +14,8 @@ Cuba.settings[:render][:template_engine] = "haml"
 
 Cuba.use Sass::Plugin::Rack
 Cuba.use Rack::Parser
+Cuba.use Rack::Session::Cookie, key: 'my_blog',
+                                secret: ENV.fetch("APP_SECRET")
 
 
 Dir["./filters/**/*.rb"].each { |rb| require rb }
@@ -25,8 +27,31 @@ Cuba.plugin RouteHelpers
 Cuba.plugin Shield::Helpers
 
 Cuba.define do
+  on 'login' do
+    on get do
+      render 'login'
+    end
+
+    on post do
+      email = req.params["email"]
+      password = req.params["password"]
+
+      if login(User, email, password)
+        remember(3600)
+        res.redirect '/admin'
+      else
+        render 'login'
+      end
+    end
+  end
+
   on 'admin' do
-    run Admin
+    on authenticated(User) do
+      run Admin
+    end
+    on default do
+      res.redirect '/login'
+    end
   end
 
   on 'api' do

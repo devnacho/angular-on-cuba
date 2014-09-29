@@ -34,7 +34,7 @@ build/
 .rvmrc
 
 .gs
-
+.env
 
 # Ignore sass cache
 .sass-cache

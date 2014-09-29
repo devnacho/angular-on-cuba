@@ -6,4 +6,8 @@ class User < Ohm::Model
 
   unique :email
 
+  def self.fetch(identifier)
+    with(:email, identifier)
+  end
+
 end
