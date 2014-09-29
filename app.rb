@@ -15,10 +15,12 @@ Cuba.use Sass::Plugin::Rack
 Cuba.use Rack::Parser
 
 
-Dir["./lib/**/*.rb"].each     { |rb| require rb }
 Dir["./filters/**/*.rb"].each { |rb| require rb }
+Dir["./helpers/**/*.rb"].each { |rb| require rb }
 Dir["./models/**/*.rb"].each  { |rb| require rb }
 Dir["./routes/**/*.rb"].each  { |rb| require rb }
+
+Cuba.plugin RouteHelpers
 
 Cuba.define do
   on 'admin' do
