@@ -9,6 +9,7 @@ class Article < Ohm::Model
   attribute :published, Type::Boolean
   attribute :published_at, Type::Timestamp
   index :tags
+  index :published
 
   def to_hash
     super.merge title: title,
