@@ -38,3 +38,5 @@ build/
 
 # Ignore sass cache
 .sass-cache
+
+dump.rdb
