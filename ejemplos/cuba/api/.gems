@@ -1,0 +1,5 @@
+cuba -v 3.3.0
+ohm -v 2.0.1
+ohm-contrib -v 2.0.0
+rack-parser -v 0.6.0
+shotgun -v 0.9
