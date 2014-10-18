@@ -1,11 +1,12 @@
 function AdminController($scope, $rootScope){
-  $scope.loading = true;
+  $scope.loading = 0;
 
-  $rootScope.$on("$stateChangeStart", function() {
-    $scope.loading = true;
+  $rootScope.$on("httpRequestStart", function() {
+    $scope.loading += 1;
   });
-  $rootScope.$on("$stateChangeSuccess", function() {
-    $scope.loading = false;
+
+  $rootScope.$on("httpRequestStop", function() {
+    $scope.loading -= 1;
   });
 
 }

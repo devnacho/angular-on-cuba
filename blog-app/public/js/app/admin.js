@@ -1,8 +1,8 @@
 (function(){
   var app = angular.module('myBlog', ['ngAnimate','ui.router', 'ngResource']);
 
-  app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
-             function($stateProvider, $urlRouterProvider, $locationProvider) {
+  app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider', '$provide',
+             function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider, $provide) {
 
     $locationProvider.html5Mode(true);
 
@@ -24,6 +24,23 @@
             templateUrl: '/js_partials/admin/articles/edit.html',
             controller: 'AdminArticlesEditController'
         })
+
+    $provide.factory('myHttpInterceptor', ['$q', '$rootScope', function($q, $rootScope){
+      return {
+        'request': function(config) {
+          $rootScope.$broadcast("httpRequestStart")
+          return config;
+        },
+
+        'response': function(response) {
+          $rootScope.$broadcast("httpRequestStop")
+          return response;
+        }
+      };
+    }])
+
+
+    $httpProvider.interceptors.push('myHttpInterceptor');
 
   }]);
 
