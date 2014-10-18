@@ -1,0 +1,15 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <script src="../../lib/angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div ng-controller="MainCtrl as main">
+      <ul>
+        <li ng-repeat="name in main.names"> {{ name }} </li>
+      </ul>
+    </div>
+  </body>
+</html>
+
