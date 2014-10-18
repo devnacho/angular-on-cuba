@@ -14,13 +14,11 @@ class Api::Admin < Cuba
 
             on publisher.valid? do
               article = Article.create publisher.attributes
-              res.status = 201
-              json article
+              json article, status: 201
             end
 
             on default do
-              res.status = 422
-              json publisher.errors
+              json publisher.errors, status: 422
             end
           end
         end
@@ -41,8 +39,7 @@ class Api::Admin < Cuba
             end
 
             on default do
-              res.status = 422
-              json publisher.errors
+              json publisher.errors, status: 422
             end
           end
 

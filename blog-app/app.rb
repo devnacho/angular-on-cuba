@@ -23,7 +23,7 @@ Dir["./helpers/**/*.rb"].each { |rb| require rb }
 Dir["./models/**/*.rb"].each  { |rb| require rb }
 Dir["./routes/**/*.rb"].each  { |rb| require rb }
 
-Cuba.plugin RouteHelpers
+Cuba.plugin JsonHelpers
 Cuba.plugin Shield::Helpers
 
 Cuba.define do
