@@ -31,3 +31,8 @@
         Loading…
     .container
       = content
+
+    - Dir["views/admin/js_partials/**/*.html.haml"].each do |path|
+      - view = path.sub(/^views\/admin\/(.+)\.haml$/, '\1')
+      %script{ type: "text/ng-template", id: "/admin/#{view}" }
+        = partial view

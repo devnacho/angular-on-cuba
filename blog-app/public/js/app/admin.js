@@ -11,17 +11,17 @@
     $stateProvider
         .state('articles', {
             url: '/articles',
-            templateUrl: '/js_partials/admin/articles/index.html',
+            templateUrl: '/admin/js_partials/articles/index.html',
             controller: 'AdminArticlesIndexController'
         })
         .state('articles-new', {
             url: '/articles/new',
-            templateUrl: '/js_partials/admin/articles/new.html',
+            templateUrl: '/admin/js_partials/articles/new.html',
             controller: 'AdminArticlesNewController'
         })
         .state('articles-edit', {
             url: '/articles/:id/edit',
-            templateUrl: '/js_partials/admin/articles/edit.html',
+            templateUrl: '/admin/js_partials/articles/edit.html',
             controller: 'AdminArticlesEditController'
         })
 

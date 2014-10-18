@@ -17,3 +17,8 @@
   %body
     .container
       = content
+
+    - Dir["views/blog/js_partials/**/*.html.haml"].each do |path|
+      - view = path.sub(/^views\/(.+)\.haml$/, '\1')
+      %script{ type: "text/ng-template", id: "/#{view}" }
+        = partial view

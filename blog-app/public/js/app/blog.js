@@ -11,7 +11,7 @@
     $stateProvider
         .state('articles', {
             url: '/',
-            templateUrl: '/js_partials/blog/articles/index.html',
+            templateUrl: '/blog/js_partials/articles/index.html',
             controller: 'ArticlesIndexController'
         })
 
