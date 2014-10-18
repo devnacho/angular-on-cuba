@@ -1,0 +1,18 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    cuba (3.3.0)
+      rack
+    rack (1.5.2)
+    rack-parser (0.6.0)
+      rack
+    shotgun (0.9)
+      rack (>= 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cuba (= 3.3.0)
+  rack-parser (= 0.6.0)
+  shotgun (= 0.9)

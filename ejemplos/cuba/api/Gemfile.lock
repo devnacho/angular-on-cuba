@@ -1,0 +1,31 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    cuba (3.3.0)
+      rack
+    hiredis (0.5.2)
+    msgpack (0.5.9)
+    nido (0.0.1)
+    ohm (2.0.1)
+      msgpack
+      nido
+      redic
+    ohm-contrib (2.0.0)
+      ohm (~> 2.0.0)
+    rack (1.5.2)
+    rack-parser (0.6.0)
+      rack
+    redic (1.1.1)
+      hiredis
+    shotgun (0.9)
+      rack (>= 1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cuba (= 3.3.0)
+  ohm (= 2.0.1)
+  ohm-contrib (= 2.0.0)
+  rack-parser (= 0.6.0)
+  shotgun (= 0.9)
