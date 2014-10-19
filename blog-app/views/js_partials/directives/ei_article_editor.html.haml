@@ -14,8 +14,9 @@
 
     .ei-markdown-help{ ng: { class: "{visible: true}", show: "showHelp" } }
       %h2 Markdown Help
-      %h3 Headers
-      %ul
-        %li{ ng: { repeat: 'mdHeader in mdHeaders' } }
-          %a.insert{ href: true, ng: { click: "insert(mdHeader)" } } insert
-          {{mdHeader.syntax}}
+      %div{ ng: { repeat: "(title, hints) in mdHints" }}
+        %h3 {{ title }}
+        %ul
+          %li{ ng: { repeat: 'hint in hints' } }
+            %a.insert{ href: true, ng: { click: "insert(hint)" } } insert
+            {{hint.syntax}}
