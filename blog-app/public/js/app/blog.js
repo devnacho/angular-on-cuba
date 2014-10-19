@@ -12,7 +12,8 @@
         .state('articles', {
             url: '/',
             templateUrl: '/blog/js_partials/articles/index.html',
-            controller: 'ArticlesIndexController'
+            controller: 'ArticlesIndexController',
+            controllerAs: 'index'
         })
 
   }]);
