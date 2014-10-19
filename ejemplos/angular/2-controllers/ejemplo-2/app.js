@@ -7,6 +7,12 @@ function MainCtrl(){
     "Cacho",
     "Josefo"
   ]
+
+  var that = this;
+
+  this.removeName = function (index) {
+    that.names.splice(index, 1)
+  }
 }
 
 

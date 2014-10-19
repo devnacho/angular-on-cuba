@@ -6,8 +6,9 @@
   </head>
   <body>
     <div ng-controller="MainCtrl as main">
+      <h1>Personas</h1>
       <ul>
-        <li ng-repeat="name in main.names"> {{ name }} </li>
+        <li ng-repeat="name in main.names"> {{ name }} <a ng-click="main.removeName($index)" href="">Borrar</a></li>
       </ul>
     </div>
   </body>
