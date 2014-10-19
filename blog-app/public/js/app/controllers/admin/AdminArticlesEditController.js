@@ -1,9 +1,9 @@
-function AdminArticlesEditController($scope, $state, $stateParams, Article){
-  $scope.article = Article.get({ id: $stateParams.id }, function() {
-  });
+function AdminArticlesEditController($state, $stateParams, Article){
+  this.article = Article.get({ id: $stateParams.id });
+  var that = this;
 
-  $scope.save = function(){
-    $scope.article.$update(function(data){
+  this.save = function(){
+    that.article.$update(function(data){
       $state.go('articles');
     });
   }
@@ -12,4 +12,4 @@ function AdminArticlesEditController($scope, $state, $stateParams, Article){
 angular
   .module('myBlog')
   .controller('AdminArticlesEditController',
-              ['$scope',  '$state', '$stateParams', 'Article', AdminArticlesEditController]);
+              ['$state', '$stateParams', 'Article', AdminArticlesEditController]);

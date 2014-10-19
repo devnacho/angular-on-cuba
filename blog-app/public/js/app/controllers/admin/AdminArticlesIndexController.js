@@ -1,14 +1,14 @@
-function AdminArticlesIndexController($scope, Article){
-    $scope.articles = Article.query();
+function AdminArticlesIndexController(Article){
+    this.articles = Article.query();
+    var that = this;
 
-    $scope.remove = function (index) {
-      $scope.articles[index].$remove();
-      $scope.articles.splice(index, 1);
+    this.remove = function (index) {
+      that.articles[index].$remove();
+      that.articles.splice(index, 1);
     }
-
 }
 
 angular
   .module('myBlog')
   .controller('AdminArticlesIndexController',
-                ['$scope', 'Article', AdminArticlesIndexController]);
+                ['Article', AdminArticlesIndexController]);

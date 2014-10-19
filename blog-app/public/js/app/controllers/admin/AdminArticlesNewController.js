@@ -1,8 +1,9 @@
-function AdminArticlesNewController($scope, $state, Article){
-  $scope.article = new Article();
+function AdminArticlesNewController($state, Article){
+  this.article = new Article();
+  var that = this;
 
-  $scope.save = function(){
-    $scope.article.$save(function(data){
+  this.save = function(){
+    that.article.$save(function(data){
       $state.go('articles');
     });
   }
@@ -11,4 +12,4 @@ function AdminArticlesNewController($scope, $state, Article){
 angular
   .module('myBlog')
   .controller('AdminArticlesNewController',
-              ['$scope', '$state', 'Article', AdminArticlesNewController]);
+              ['$state', 'Article', AdminArticlesNewController]);

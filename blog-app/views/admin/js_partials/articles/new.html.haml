@@ -1,25 +1,25 @@
 .row
   .col-md-12
     .page-header
-      %h1 {{ article.title || "New Article" }}
+      %h1 {{ new.article.title || "New Article" }}
 .row
   .col-md-9
-    %input.form-control{ ng: { model: "article.title" }, type: "text", placeholder: "Article title" }
+    %input.form-control{ ng: { model: "new.article.title" }, type: "text", placeholder: "Article title" }
     %br
-    %ei-article-editor{ content: "article.body" }
+    %ei-article-editor{ content: "new.article.body" }
 
     .checkbox
       %label
-        %input{ type: 'checkbox', ng: { model: 'article.published' } }
+        %input{ type: 'checkbox', ng: { model: 'new.article.published' } }
         Publish
 
     %hr
     %ul.list-inline
       %li
-        %button.btn.btn-success.btn-lg{ ng: { click: 'save()' } } Save
+        %button.btn.btn-success.btn-lg{ ng: { click: 'new.save()' } } Save
       %li
         %a{ href: "/admin/articles" } Go Back
 
 
   .col-md-3
-    %ei-tags{ tags: "article.tags" }
+    %ei-tags{ tags: "new.article.tags" }

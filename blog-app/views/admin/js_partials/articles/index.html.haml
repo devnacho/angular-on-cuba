@@ -13,7 +13,7 @@
           .input-group-addon
             %i.fa.fa-search
           %input.form-control{:placeholder => "Filter by title, content or tags.", :type => "text", ng: { model: "query" } }
-  .article{ ng: { repeat: "article in articles | filter:query" } }
+  .article{ ng: { repeat: "article in index.articles | filter:query" } }
     .row
       .col-md-8
         %h3 {{article.title}}
@@ -26,6 +26,6 @@
         .text-right
           %a.btn.btn-sm.btn-default{ href: "", ui: { sref: "articles-edit({ id: article.id })" } }
             %i.fa.fa-edit
-          %a.btn.btn-sm.btn-danger{ href: "", ng: { click: "remove($index)" } }
+          %a.btn.btn-sm.btn-danger{ href: "", ng: { click: "index.remove($index)" } }
             %i.fa.fa-times
     %hr

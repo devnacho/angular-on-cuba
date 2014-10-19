@@ -12,17 +12,20 @@
         .state('articles', {
             url: '/articles',
             templateUrl: '/admin/js_partials/articles/index.html',
-            controller: 'AdminArticlesIndexController'
+            controller: 'AdminArticlesIndexController',
+            controllerAs: 'index'
         })
         .state('articles-new', {
             url: '/articles/new',
             templateUrl: '/admin/js_partials/articles/new.html',
-            controller: 'AdminArticlesNewController'
+            controller: 'AdminArticlesNewController',
+            controllerAs: 'new'
         })
         .state('articles-edit', {
             url: '/articles/:id/edit',
             templateUrl: '/admin/js_partials/articles/edit.html',
-            controller: 'AdminArticlesEditController'
+            controller: 'AdminArticlesEditController',
+            controllerAs: 'edit'
         })
 
     $provide.factory('myHttpInterceptor', ['$q', '$rootScope', function($q, $rootScope){

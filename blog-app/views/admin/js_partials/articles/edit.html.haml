@@ -2,21 +2,21 @@
   .col-md-9
     .page-header
       %h1
-        %ei-click-to-edit{ "editable-text" => "article.title" }
+        %ei-click-to-edit{ "editable-text" => "edit.article.title" }
 .row
   .col-md-9
     %br
-    %ei-article-editor{ content: "article.body" }
+    %ei-article-editor{ content: "edit.article.body" }
     .checkbox
       %label
-        %input{ type: 'checkbox', ng: { model: 'article.published' } }
+        %input{ type: 'checkbox', ng: { model: 'edit.article.published' } }
         Publish
 
     %hr
     %ul.list-inline
       %li
-        %button.btn.btn-success.btn-lg{ ng: { click: 'save()' } } Save
+        %button.btn.btn-success.btn-lg{ ng: { click: 'edit.save()' } } Save
       %li
         %a{ href: "/admin/articles" } Go Back
   .col-md-3
-    %ei-tags{ tags: "article.tags" }
+    %ei-tags{ tags: "edit.article.tags" }
