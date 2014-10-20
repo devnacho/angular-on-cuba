@@ -22,12 +22,13 @@ h1, h2, h3, h4, h5, h6{
   right: 0;
 
   .loading-box {
-    background: #f9edbe;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    background: rgba(2, 173, 140, 0.58);
     margin: 0 auto;
-    padding: 4px 0;
+    padding: 12px 0;
     text-align: center;
-    width: 110px;
+    width: 130px;
+    color: white;
+    border-radius: 0 0 5px 5px;
   }
 }
 
