@@ -34,11 +34,18 @@
           $rootScope.$broadcast("httpRequestStart")
           return config;
         },
-
+        'requestError': function(rejection) {
+          $rootScope.$broadcast("httpRequestStop")
+          return rejection;
+        },
         'response': function(response) {
           $rootScope.$broadcast("httpRequestStop")
           return response;
-        }
+        },
+        'responseError': function(rejection) {
+          $rootScope.$broadcast("httpRequestStop")
+          return rejection;
+        },
       };
     }])
 
