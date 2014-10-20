@@ -1,11 +1,11 @@
 class Admin < Cuba
 
-  settings[:render][:views] = File.expand_path("../views/admin", __dir__)
+  settings[:render][:layout] = "admin/layout"
 
   define do
 
     on get do
-      res.write view("app")
+      res.write view("admin/app")
     end
 
   end
