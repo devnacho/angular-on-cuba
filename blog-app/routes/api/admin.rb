@@ -18,7 +18,7 @@ class Api::Admin < Cuba
             end
 
             on default do
-              json publisher.errors, status: 422
+              json({errors: publisher.errors}, status: 422)
             end
           end
         end
@@ -39,7 +39,7 @@ class Api::Admin < Cuba
             end
 
             on default do
-              json publisher.errors, status: 422
+              json({errors: publisher.errors}, status: 422)
             end
           end
 
