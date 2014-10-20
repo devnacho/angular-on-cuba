@@ -11,7 +11,8 @@ class Api < Cuba
 
         # POST /articles
         on post do
-          article = Article.create slice(req.params, :title, :body, :tags, :published)
+          params = slice(req.params, :title, :body, :tags, :published)
+          article = Article.create params
           json article, status: 201
         end
       end
@@ -26,7 +27,8 @@ class Api < Cuba
 
         # PUT /articles/:id
         on put, root do
-          article.update slice(req.params, :title, :body, :tags, :published)
+          params = slice(req.params, :title, :body, :tags, :published)
+          article.update params
           json article
         end
 
