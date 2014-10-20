@@ -28,4 +28,6 @@
         .text-right
           %a.btn.btn-sm.btn-default{ href: "", ui: { sref: "articles-edit({ id: article.id })" } }
             %i.fa.fa-edit
+          %a.btn.btn-sm.btn-danger{ href: "", ng: { click: "index.remove($index)" } }
+            %i.fa.fa-times
     %hr
