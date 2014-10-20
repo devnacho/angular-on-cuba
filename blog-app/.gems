@@ -1,9 +1,10 @@
 cuba -v 3.3.0
 haml -v 4.0.5
-shotgun -v 0.9
-sass -v 3.4.4
 ohm -v 2.0.1
-rack-parser -v 0.6.0
 ohm-contrib -v 2.0.0
+puma -v 2.9.1
+rack-parser -v 0.6.0
+sass -v 3.4.4
 scrivener -v 0.2.0
 shield -v 2.1.0
+shotgun -v 0.9
