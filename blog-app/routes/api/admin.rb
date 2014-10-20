@@ -26,11 +26,11 @@ class Api::Admin < Cuba
         on ':id' do |id|
           article = Article[id]
 
-          on get do
+          on get, root do
             json article
           end
 
-          on put do
+          on put, root do
             publisher = Publisher.new req.params
 
             on publisher.valid? do
@@ -43,7 +43,7 @@ class Api::Admin < Cuba
             end
           end
 
-          on delete do
+          on delete, root do
             article.delete
 
             res.status = 204
