@@ -1,5 +1,6 @@
 .ei-editor {
-  position: relative; }
+  position: relative;
+  min-height: 340px; }
   .ei-editor .ei-markdown-help {
     width: 320px;
     height: 300px;
