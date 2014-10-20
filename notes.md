@@ -21,27 +21,13 @@ https://docs.angularjs.org/api/ng/directive/ngList
 ## LocalStorage first
 Cuando arrancamos a prototipar es comodo arrancar con un servicio que persista LocalStorage del browser y después es cuestión de cambiar el servicio o crear un nuevo servicio que se conecte con la API que realizaremos en CUBA
 
-## Partials
-- Ruta generica para partials para poder usar HAML (ojo con temas de seguridad, no production ready!)
-
 ## markdown help
 - hack de clases para hacer que no se vea hasta que cargo todo -- [ref](http://stackoverflow.com/questions/17985390/angular-animate-ng-cloak-opacity)
 
-## Loading
-- events on ui-router -- [ref](http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.$state)
-
-## Comparacion
-Para que puedan entender las ventajas facilmente podemos hacer un quick rails scaffolding y mostrar como siempre hace page reload y que para cada interacción deberíamos agregar código extra js o plugins.
-
 ## API
-- $http vs [$resource](https://docs.angularjs.org/api/ngResource/service/$resource)
-
-## general
-- Agregar la dependencia en todos lados (eg: ngResource)
+- $http vs [$resource](https://docs.angularjs.org/api/ngResource/service/$resource), y restangular
 
 ## UI Router
 Para poder cambiar de estado en los diferentes jsControllers hay que inyectar $state.
-De esta manera se puede hacer $state.go('articles'); por ejemplo.
+De esta manera se puede hacer $state.go('articles')
 
-## Ohm
-- Agregar Ohm::Timestamps de entrada, para no tener problemas de migraciones
