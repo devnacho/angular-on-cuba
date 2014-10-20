@@ -9,10 +9,13 @@ function eiClickToEdit() {
         },
         link: function(scope, element, attrs) {
           scope.edit = false;
-          scope.originalText = scope.editableText;
+          scope.$watch('edit', function(){
+            if(scope.edit){
+              scope.originalText = scope.editableText;
+            }
+          })
 
           scope.saveEdit = function(){
-            scope.originalText = scope.editableText;
             scope.edit = false;
           }
 
