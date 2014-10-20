@@ -17,7 +17,6 @@ Cuba.use Rack::Parser
 Cuba.use Rack::Session::Cookie, key: 'my_blog',
                                 secret: ENV.fetch("APP_SECRET")
 
-
 Dir["./filters/**/*.rb"].each { |rb| require rb }
 Dir["./helpers/**/*.rb"].each { |rb| require rb }
 Dir["./models/**/*.rb"].each  { |rb| require rb }
@@ -37,7 +36,7 @@ Cuba.define do
       password = req.params["password"]
 
       if login(User, email, password)
-        remember(3600)
+        remember(86400)
         res.redirect '/admin'
       else
         render 'login'
