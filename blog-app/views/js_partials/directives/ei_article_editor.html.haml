@@ -10,8 +10,7 @@
   %div{ ng: { show: "preview" } }
     %ei-marked{ preview: "preview", "to-convert" => "content", ng: { show: "preview" } }
   %div{ ng: { hide: "preview" } }
-    %textarea.form-control{ ng: { model: "content", trim: "false" }, rows: "12", placeholder: "Article content" }
-
+    %textarea.form-control{ ng: { model: "content", trim: "false", required: "required" }, rows: "12", placeholder: "Article content" }
     .ei-markdown-help{ ng: { class: "{visible: true}", show: "showHelp" } }
       %h2 Markdown Help
       %div{ ng: { repeat: "(title, hints) in mdHints" }}

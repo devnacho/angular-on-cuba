@@ -4,7 +4,8 @@ function eiClickToEdit() {
         replace: 'false',
         templateUrl: '/js_partials/directives/ei_click_to_edit.html',
         scope: {
-          editableText: '='
+          editableText: '=',
+          required: '='
         },
         link: function(scope, element, attrs) {
           scope.edit = false;

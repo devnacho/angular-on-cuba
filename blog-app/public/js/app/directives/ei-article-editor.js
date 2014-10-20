@@ -4,7 +4,8 @@ function eiArticleEditor() {
         replace: 'true',
         templateUrl: '/js_partials/directives/ei_article_editor.html',
         scope: {
-          content: '='
+          content: '=',
+          required: '='
         },
         link: function(scope, element, attrs) {
           scope.showHelp = false;
