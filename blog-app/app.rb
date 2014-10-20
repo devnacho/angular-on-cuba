@@ -26,6 +26,11 @@ Cuba.plugin JsonHelpers
 Cuba.plugin Shield::Helpers
 
 Cuba.define do
+
+  on 'api' do
+    run Api
+  end
+
   on 'login' do
     on get do
       render 'login'
@@ -51,14 +56,6 @@ Cuba.define do
     on default do
       res.redirect '/login'
     end
-  end
-
-  on 'api' do
-    run Api
-  end
-
-  on 'js_partials' do
-    run JsPartials
   end
 
   on default do
