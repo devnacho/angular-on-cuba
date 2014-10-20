@@ -5,7 +5,7 @@ class Admin < Cuba
   define do
 
     on get do
-      res.write view("admin_app")
+      res.write view("app")
     end
 
   end
