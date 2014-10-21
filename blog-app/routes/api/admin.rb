@@ -48,6 +48,12 @@ class Api::Admin < Cuba
 
             res.status = 204
           end
+
+          on post, "publish" do
+            article.update published: true
+
+            json article
+          end
         end
 
       end

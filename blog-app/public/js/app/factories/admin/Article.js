@@ -1,5 +1,5 @@
 function Article($resource){
-  return $resource('/api/admin/articles/:id',
+  return $resource('/api/admin/articles/:id/:action',
                    { id: '@id' },
                    {
                      update: { method: 'PUT',
@@ -11,7 +11,8 @@ function Article($resource){
 
                                   return angular.toJson(data);
                                }
-                     }
+                      },
+                      publish: { method: 'POST', params: { action: 'publish' } }
                    });
 }
 

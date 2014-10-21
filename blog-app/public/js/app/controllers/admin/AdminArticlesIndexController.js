@@ -8,6 +8,10 @@ function AdminArticlesIndexController(Article){
       that.articles[index].$remove();
       that.articles.splice(index, 1);
     }
+
+    this.publish = function (index) {
+      that.articles[index].$publish();
+    }
 }
 
 angular
