@@ -2,7 +2,6 @@ require 'cuba'
 require 'json'
 require 'rack/parser'
 require 'ohm'
-require 'ohm/json'
 require 'ohm/contrib'
 
 Dir["./helpers/**/*.rb"].each  { |rb| require rb }

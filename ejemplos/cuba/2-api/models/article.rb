@@ -1,3 +1,5 @@
+require 'ohm/json'
+
 class Article < Ohm::Model
   include Ohm::Timestamps
   include Ohm::DataTypes
