@@ -15,6 +15,13 @@
             controller: 'ArticlesIndexController',
             controllerAs: 'index'
         })
+        .state('articles-show', {
+            url: '/articles/:id',
+            templateUrl: '/blog/js_partials/articles/show.html',
+            controller: 'ArticlesShowController',
+            controllerAs: 'show'
+        })
+
 
   }]);
 

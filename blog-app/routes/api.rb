@@ -15,7 +15,7 @@ class Api < Cuba
         end
       end
 
-      on get ':id' do
+      on get,':id' do |id|
         json Article[id]
       end
     end
