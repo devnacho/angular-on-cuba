@@ -10,7 +10,7 @@
       <ul>
         <li ng-show="article.published" ng-repeat="article in index.articles">
           {{ article.title }}
-          <button href="" ng-click=" article.published = !article.published ">Undo Publish</button>
+          <button ng-click=" article.published = !article.published ">Undo Publish</button>
         </li>
       </ul>
 
