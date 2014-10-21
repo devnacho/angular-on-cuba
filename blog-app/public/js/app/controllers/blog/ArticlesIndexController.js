@@ -2,6 +2,8 @@ function ArticlesIndexController(Article){
 
   this.articles = Article.query();
 
+  this.articlesLimit = 2;
+
 }
 
 angular
