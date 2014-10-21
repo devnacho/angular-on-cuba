@@ -4,8 +4,6 @@ GEM
     armor (0.0.3)
     cuba (3.3.0)
       rack
-    haml (4.0.5)
-      tilt
     hiredis (0.5.2)
     msgpack (0.5.9)
     nido (0.0.1)
@@ -35,7 +33,6 @@ PLATFORMS
 
 DEPENDENCIES
   cuba (= 3.3.0)
-  haml (= 4.0.5)
   ohm (= 2.0.1)
   ohm-contrib (= 2.0.0)
   puma (= 2.9.1)

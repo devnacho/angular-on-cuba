@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
 gem "cuba", "3.3.0"
-gem "haml", "4.0.5"
 gem "ohm", "2.0.1"
 gem "ohm-contrib", "2.0.0"
 gem "puma", "2.9.1"

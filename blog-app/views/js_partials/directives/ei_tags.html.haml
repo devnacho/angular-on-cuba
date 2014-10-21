@@ -1,7 +1,0 @@
-.ei-tags
-  %h4 Tags
-  %input.form-control{ ng: { model: "tags", list: true }, type: "text", placeholder: "Add Tags here separated by commas" }
-  %ul.ei-tags-list.list-inline
-    %li{ ng: { repeat: "tag in tags track by $index" } }
-      %span
-        {{tag}}

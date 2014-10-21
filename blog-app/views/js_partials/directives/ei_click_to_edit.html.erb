@@ -1,0 +1,19 @@
+<div class='ei-click-to-edit'>
+  <div class='editable' ng-click='edit = true' ng-hide='edit'>
+    {{editableText}}
+    <i class='fa fa-pencil'></i>
+  </div>
+  <div ng-show='edit'>
+    <form class='form-inline' name='clickToEdit'>
+      <div class='form-group'>
+        <input class='form-control' ng-model='editableText' ng-required='required' type='text'>
+        <a class='btn btn-sm btn-success' href='' ng-click='saveEdit()' ng-disabled='clickToEdit.$invalid'>
+          <i class='fa fa-check'></i>
+        </a>
+        <a class='btn btn-sm btn-danger' href='' ng-click='discardEdit()'>
+          <i class='fa fa-times'></i>
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

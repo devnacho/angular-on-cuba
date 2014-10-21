@@ -1,0 +1,35 @@
+<form class='simple-form' name='articleForm' novalidate=''>
+  <div class='row'>
+    <div class='col-md-9'>
+      <div class='page-header'>
+        <h1>
+          <ei-click-to-edit editable-text='edit.article.title' required='true'></ei-click-to-edit>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-9'>
+      <br>
+      <ei-article-editor content='edit.article.body' required='true'></ei-article-editor>
+      <div class='checkbox'>
+        <label>
+          <input ng-model='edit.article.published' type='checkbox'>
+          Publish
+        </label>
+      </div>
+      <hr>
+      <ul class='list-inline'>
+        <li>
+          <button class='btn btn-success btn-lg' ng-click='edit.save()' ng-disabled='articleForm.$invalid'>Save</button>
+        </li>
+        <li>
+          <a href='/admin/articles'>Go Back</a>
+        </li>
+      </ul>
+    </div>
+    <div class='col-md-3'>
+      <ei-tags tags='edit.article.tags'></ei-tags>
+    </div>
+  </div>
+</form>
