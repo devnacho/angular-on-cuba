@@ -1,4 +1,9 @@
 <h1>Articles</h1>
 <div ng-repeat='article in index.articles'>
-  {{article.title}}
+  <h2>
+    {{article.title}}
+    <small>{{ article.published_at | date:'d/M/y' }}</small>
+  </h2>
+  <p>{{ article.body | limitTo:400 }}</p>
+  <hr>
 </div>
