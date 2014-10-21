@@ -10,7 +10,6 @@ require "shield"
 require 'sass/plugin/rack'
 
 Cuba.plugin Cuba::Render
-Cuba.settings[:render][:template_engine] = "haml"
 
 Cuba.use Sass::Plugin::Rack
 Cuba.use Rack::Parser

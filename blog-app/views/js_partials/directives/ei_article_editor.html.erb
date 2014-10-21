@@ -1,0 +1,32 @@
+<div class='ei-editor'>
+  <div class='help text-right'>
+    <ul class='list-inline'>
+      <li ng-class='{active: preview}' ng-click='togglePreview()'>
+        <i class='fa fa-eye'></i>
+        Markdown Preview
+      </li>
+      <li ng-class='{active: showHelp}' ng-click='toggleHelp()'>
+        <i class='fa fa-paragraph'></i>
+        Markdown Help
+      </li>
+    </ul>
+  </div>
+  <div ng-show='preview'>
+    <ei-marked ng-show='preview' preview='preview' to-convert='content'></ei-marked>
+  </div>
+  <div ng-hide='preview'>
+    <textarea class='form-control' ng-model='content' ng-required='required' ng-trim='false' placeholder='Article content' rows='12'></textarea>
+    <div class='ei-markdown-help' ng-class='{visible: true}' ng-show='showHelp'>
+      <h2>Markdown Help</h2>
+      <div ng-repeat='(title, hints) in mdHints'>
+        <h3>{{ title }}</h3>
+        <ul>
+          <li ng-repeat='hint in hints'>
+            <a class='insert' href ng-click='insert(hint)'>insert</a>
+            {{hint.syntax}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

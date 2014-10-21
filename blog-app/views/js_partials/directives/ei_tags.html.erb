@@ -1,0 +1,11 @@
+<div class='ei-tags'>
+  <h4>Tags</h4>
+  <input class='form-control' ng-list ng-model='tags' placeholder='Add Tags here separated by commas' type='text'>
+  <ul class='ei-tags-list list-inline'>
+    <li ng-repeat='tag in tags track by $index'>
+      <span>
+        {{tag}}
+      </span>
+    </li>
+  </ul>
+</div>

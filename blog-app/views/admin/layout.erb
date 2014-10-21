@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="myBlog">
+  <head>
+    <title>Angular on Cuba</title>
+    <link href="/vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/vendor/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet" >
+    <base href="/admin/">
+
+    <script src="/vendor/angular/angular.js"></script>
+    <script src="/vendor/angular-animate/angular-animate.js"></script>
+    <script src="/vendor/angular-resource/angular-resource.js"></script>
+    <script src="/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/vendor/marked/lib/marked.js"></script>
+    <script src="/js/app/admin.js"></script>
+    <script src="/js/app/controllers/admin/AdminController.js"></script>
+    <script src="/js/app/controllers/admin/AdminArticlesIndexController.js"></script>
+    <script src="/js/app/controllers/admin/AdminArticlesNewController.js"></script>
+    <script src="/js/app/controllers/admin/AdminArticlesEditController.js"></script>
+    <script src="/js/app/directives/ei-article-editor.js"></script>
+    <script src="/js/app/directives/ei-marked.js"></script>
+    <script src="/js/app/directives/ei-tags.js"></script>
+    <script src="/js/app/directives/ei-click-to-edit.js"></script>
+    <script src="/js/app/factories/admin/Article.js"></script>
+  </head>
+
+  <body ng-controller='AdminController'>
+    <div id="loading" ng-show='loading'>
+      <div class="loading-box">
+        <i class="fa fa-spinner fa-spin"></i>
+        Loading…
+      </div>
+    </div>
+    <div class="container">
+      <%= content %>
+    </div>
+
+    <%= render_partials "views/admin/js_partials/**/*.html.erb" %>
+    <%= render_partials "views/js_partials/**/*.html.erb" %>
+  </body>
+</html>

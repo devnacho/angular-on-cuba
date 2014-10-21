@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="myBlog">
+  <head>
+    <title>Angular on Cuba</title>
+    <link href="/vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/vendor/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <base href="/">
+
+    <script src="/vendor/angular/angular.js"></script>
+    <script src="/vendor/angular-animate/angular-animate.js"></script>
+    <script src="/vendor/angular-resource/angular-resource.js"></script>
+    <script src="/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/js/app/blog.js"></script>
+    <script src="/js/app/controllers/blog/ArticlesIndexController.js"></script>
+    <script src="/js/app/factories/blog/Article.js"></script>
+  <body>
+    <div class="container">
+      <%= content %>
+    </div>
+
+    <%= render_partials "views/blog/js_partials/**/*.html.erb" %>
+  </body>
+</html>

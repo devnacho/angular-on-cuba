@@ -1,0 +1,40 @@
+<div class='articles-index'>
+  <div class='header'>
+    <div class='row'>
+      <div class='col-md-8'>
+        <h1>ARTICLES</h1>
+      </div>
+      <div class='col-md-4'>
+        <div class='text-right'>
+          <a class='btn btn-primary' ui-sref='articles-new'>New Article</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-3 col-md-offset-9'>
+      <div class='search'></div>
+    </div>
+  </div>
+  <div class='article' ng-repeat='article in index.articles'>
+    <div class='row'>
+      <div class='col-md-8'>
+        <h3>{{article.title}}</h3>
+        <div class='date' ng-show='article.published_at'>
+          {{article.published_at | date:'mediumDate'}}
+        </div>
+        <span class='label' ng-class="{'label-success': article.published, 'label-default': !article.published }">
+          {{article.published ? 'published' : 'draft'}}
+        </span>
+      </div>
+      <div class='col-md-4'>
+        <div class='text-right'>
+          <a class='btn btn-sm btn-default' href='' ui-sref='articles-edit({ id: article.id })'>
+            <i class='fa fa-edit'></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>

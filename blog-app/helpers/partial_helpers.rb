@@ -1,10 +1,10 @@
 module PartialHelpers
 
   def render_partials(glob)
-    Dir[glob].each do |path|
-      view = path.sub(/^views\/(.+)\.haml$/, '\1')
-      haml_tag "script", partial(view), type: "text/ng-template", id: "/#{view}"
-    end
+    Dir[glob].map do |path|
+      view = path.sub(/^views\/(.+)\.erb$/, '\1')
+      "<script type='text/ng-template' id='/#{view}'>#{partial(view)}</script>"
+    end.join("\n")
   end
 
 end
