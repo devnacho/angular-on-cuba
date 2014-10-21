@@ -2,7 +2,7 @@ class Blog < Cuba
 
   define do
 
-    on root do
+    on get do
       res.write view("blog/app")
     end
 
