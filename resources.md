@@ -11,6 +11,7 @@ Angular
 - https://thinkster.io/angulartutorial/a-better-way-to-learn-angularjs/
 - https://speakerdeck.com/pearlchen/angularjs-at-devweek-2014
 - http://angular.codeschool.com/
+- http://fdietz.github.io/recipes-with-angular-js/
 - Testing:
   - [Karma](http://karma-runner.github.io/)
   - [Protactor](https://github.com/angular/protractor)
