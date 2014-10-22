@@ -18,7 +18,7 @@
 
       <h1>Draft Articles</h1>
       <ul>
-        <li ng-hide="article.published" ng-repeat="article in index.articles | filter : search ">
+        <li ng-hide="article.published" ng-repeat="article in index.articles">
           {{ article.title }}
           <button ng-click=" article.published = !article.published ">Publish</button>
         </li>
