@@ -10,7 +10,7 @@
       <input ng-model="search" placeholder="Search Articles" />
       <h1>Published Articles</h1>
       <ul>
-        <li ng-show="article.published" ng-repeat="article in index.articles | filter : search | limitTo: 3">
+        <li ng-show="article.published" ng-repeat="article in index.articles | filter : search | limitTo: 2">
           {{ article.title }}
           <br/>
           <strong>{{ article.published_at | date:'medium' }}</strong>
