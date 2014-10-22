@@ -6,9 +6,11 @@
   </head>
   <body>
     <div ng-controller="IndexCtrl as index">
+      <label>Search:</label>
+      <input ng-model="search" placeholder="Search Articles" />
       <h1>Published Articles</h1>
       <ul>
-        <li ng-show="article.published" ng-repeat="article in index.articles">
+        <li ng-show="article.published" ng-repeat="article in index.articles | filter : search ">
           {{ article.title }}
           <br/>
           <strong>{{ article.published_at | date:'medium' }}</strong>
@@ -19,7 +21,7 @@
 
       <h1>Draft Articles</h1>
       <ul>
-        <li ng-hide="article.published" ng-repeat="article in index.articles">
+        <li ng-hide="article.published" ng-repeat="article in index.articles | filter : search ">
           {{ article.title }}
           <button ng-click="index.publish(article)">Publish</button>
         </li>
