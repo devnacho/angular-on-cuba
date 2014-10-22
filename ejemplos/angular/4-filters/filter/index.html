@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <script src="../../lib/angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div ng-controller="IndexCtrl as index">
+      <label>Search:</label>
+      <input ng-model="search" placeholder="Search Articles" />
+      <h1>Published Articles</h1>
+      <ul>
+        <li ng-show="article.published" ng-repeat="article in index.articles | filter : search ">
+          {{ article.title }}
+          <button ng-click=" article.published = !article.published ">Undo Publish</button>
+        </li>
+      </ul>
+
+      <h1>Draft Articles</h1>
+      <ul>
+        <li ng-hide="article.published" ng-repeat="article in index.articles | filter : search ">
+          {{ article.title }}
+          <button ng-click=" article.published = !article.published ">Publish</button>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
+
