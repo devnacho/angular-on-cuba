@@ -13,6 +13,14 @@ function IndexCtrl(){
     {
       title: "Nikola Tesla",
       published: false
+    },
+    {
+      title: "A very important draft that I'll publish some day",
+      published: false
+    },
+    {
+      title: "Another draft",
+      published: false
     }
   ]
 
