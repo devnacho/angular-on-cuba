@@ -12,6 +12,7 @@ Angular
 - https://speakerdeck.com/pearlchen/angularjs-at-devweek-2014
 - http://angular.codeschool.com/
 - http://fdietz.github.io/recipes-with-angular-js/
+- http://www.ng-newsletter.com/
 - Testing:
   - [Karma](http://karma-runner.github.io/)
   - [Protactor](https://github.com/angular/protractor)
